@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">躁郁症检测助手</string>
+    <string name="title_home">首页</string>
+    <string name="title_discover">发现</string>
+    <string name="title_me">我</string>
+    <string name="settings">设置</string>
+    <string name="button_visualise">数据可视化</string>
+    <string name="button_analyse">分析数据</string>
+    <string name="button_log">生成周报</string>
+    <string name="button_search">寻找附近</string>
+    <string name="text_user_info">个人信息</string>
+</resources>

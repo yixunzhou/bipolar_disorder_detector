@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:layout_marginTop="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/text_user_info"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/info"
+        android:background="@color/colorBackground" />
+    <Button
+        android:id="@+id/nickname_profile_text"
+        android:layout_width="200dp"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:text="用户昵称"
+        android:gravity="start|center"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"/>
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="50sp"
+        style="@style/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:layout_constraintStart_toEndOf="@+id/nickname_profile_text"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:id="@+id/nickname_profile"
+        android:gravity="end|center"/>
+    <Button
+        android:id="@+id/username_profile_text"
+        android:layout_width="200dp"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:layout_marginTop="1sp"
+        android:text="用户名"
+        android:gravity="start|center"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname_profile_text" />
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname_profile"
+        app:layout_constraintStart_toEndOf="@+id/username_profile_text"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:id="@+id/username_profile"
+        android:gravity="end|center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:visibility="invisible"
+        android:layout_marginTop="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="设置昵称"
+        android:background="@color/colorBackground"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/nickname_label" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:visibility="invisible"
+        android:id="@+id/changeNickname"
+        android:layout_marginTop="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname_label" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:visibility="invisible"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeNickname"
+        android:text="确定更改"
+        android:id="@+id/confirmChangeNickname"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:visibility="invisible"
+        android:layout_marginTop="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="设置用户名"
+        android:background="@color/colorBackground"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/username_label" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:visibility="invisible"
+        android:id="@+id/changeUsername"
+        android:layout_marginTop="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_label" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        style="@style/button"
+        android:visibility="invisible"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeUsername"
+        android:text="确定更改"
+        android:id="@+id/confirmChangeUsername"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
