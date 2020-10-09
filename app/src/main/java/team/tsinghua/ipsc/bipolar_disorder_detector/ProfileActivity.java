@@ -70,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                 MainActivity.nickname = changeNickname.getText().toString();
                 String[] newSettings = new String[]{"Username:" + MainActivity.username, "Nickname:" + MainActivity.nickname};
-                utils.writeToSettings(MainActivity.setting_file, newSettings);
+//                utils.writeToSettings(MainActivity.setting_file, newSettings);
 
                 info.setVisibility(View.VISIBLE);
                 btnNichnameText.setVisibility(View.VISIBLE);
@@ -89,7 +89,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 MainActivity.username = changeUsername.getText().toString();
                 String[] newSettings = new String[]{"Username:" + MainActivity.username, "Nickname:" + MainActivity.nickname};
-                utils.writeToSettings(MainActivity.setting_file, newSettings);
+//                utils.writeToSettings(MainActivity.setting_file, newSettings);
                 info.setVisibility(View.VISIBLE);
                 btnNichnameText.setVisibility(View.VISIBLE);
                 btnUsernameText.setVisibility(View.VISIBLE);

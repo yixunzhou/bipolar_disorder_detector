@@ -35,7 +35,7 @@ public class MeFragment extends Fragment {
         final Button btnSettings = root.findViewById(R.id.settings);
 
         if (MainActivity.username!=null && MainActivity.nickname!=null) {
-            btnUser.setText(MainActivity.nickname + "\n用户编号：" + MainActivity.username);
+            btnUser.setText(MainActivity.nickname + "\n用户名：" + MainActivity.username);
         } else if (MainActivity.username==null && MainActivity.nickname==null) {
             btnUser.setText("登录/注册");
         }

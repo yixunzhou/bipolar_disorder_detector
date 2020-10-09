@@ -15,6 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -28,9 +29,12 @@ public class MainActivity extends AppCompatActivity {
     public final static String root_dir = Environment.getExternalStorageDirectory().getAbsolutePath() + "/";
 
     public final static String setting_file = root_dir + "bipolar_disorder/settings.txt";
-    public final static String[] settings = utils.readSettings(setting_file);
-    public static String username = settings[0].split(":")[1];
-    public static String nickname = settings[1].split(":")[1];
+
+    public static String username;
+    public static String nickname;
+//    public static String username = settings[0].split(":")[1];
+//    public static String nickname = settings[1].split(":")[1];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,20 +43,23 @@ public class MainActivity extends AppCompatActivity {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_PERMISSION_CODE);
         }
-
-
-
+        final String[] settings = utils.readSettings(setting_file);
+//        username = settings[0].split(":")[1];
+//        nickname = settings[1].split(":")[1];
+        username = "197348";
+        nickname = "yixun";
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
+        // Passing each menu ID as search_activity set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_discover, R.id.navigation_me)
+                R.id.navigation_home,R.id.navigation_discover, R.id.navigation_statistics, R.id.navigation_me)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-        Toast toast = Toast.makeText(this, "请连接手环", Toast.LENGTH_SHORT);
-        toast.show();
+        Toast.makeText(this, "请连接手环", Toast.LENGTH_SHORT).show();
+
+
     }
 
 }

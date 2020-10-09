@@ -7,26 +7,6 @@
     android:background="@color/colorBackground"
     tools:context=".ui.discover.DiscoverFragment">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/map"
-        android:layout_marginTop="10dp"
-        android:scaleType="fitCenter" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        style="@style/button"
-        android:id="@+id/search"
-        app:layout_constraintTop_toBottomOf="@+id/map"
-        android:text="@string/button_search"
-        android:gravity="start|center"
-        android:drawableStart="@drawable/ic_search_black_24dp"
-        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

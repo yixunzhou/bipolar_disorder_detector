@@ -7,51 +7,59 @@
     android:background="@color/colorBackground"
     tools:context=".ui.home.HomeFragment">
 
-    <ImageView
-        android:id="@+id/signal"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        style="@style/button"
-        android:id="@+id/visualise"
-        app:layout_constraintTop_toBottomOf="@+id/signal"
-        android:text="@string/button_visualise"
-        android:gravity="start|center"
-        android:drawableStart="@drawable/ic_show_chart_black_24dp"
-        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+        <ImageView
+            android:id="@+id/signal"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:id="@+id/imglabel"
+            app:layout_constraintTop_toBottomOf="@+id/signal"
+            android:textSize="15sp"
+            android:textColor="@color/colorText"
+            android:gravity="center"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        style="@style/button"
-        android:id="@+id/analyse"
-        app:layout_constraintTop_toBottomOf="@+id/visualise"
-        android:text="@string/button_analyse"
-        android:gravity="start|center"
-        android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
-        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            style="@style/button"
+            android:id="@+id/visualise"
+            app:layout_constraintTop_toBottomOf="@+id/imglabel"
+            android:text="@string/button_visualise"
+            android:gravity="start|center"
+            android:drawableStart="@drawable/ic_show_chart_black_24dp"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            style="@style/button"
+            android:id="@+id/analyse"
+            app:layout_constraintTop_toBottomOf="@+id/visualise"
+            android:text="@string/button_analyse"
+            android:gravity="start|center"
+            android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        style="@style/button"
-        android:id="@+id/log"
-        app:layout_constraintTop_toBottomOf="@+id/analyse"
-        android:text="@string/button_log"
-        android:gravity="start|center"
-        android:drawableStart="@drawable/ic_arrow_downward_black_24dp"
-        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            style="@style/button"
+            android:id="@+id/log"
+            app:layout_constraintTop_toBottomOf="@+id/analyse"
+            android:text="@string/button_log"
+            android:gravity="start|center"
+            android:drawableStart="@drawable/ic_arrow_downward_black_24dp"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,4 +22,14 @@
         android:name="team.tsinghua.ipsc.bipolar_disorder_detector.ui.me.MeFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_me" />
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_single"-->
+<!--        android:name="team.tsinghua.ipsc.bipolar_disorder_detector.ui.single.SingleFragment"-->
+<!--        android:label="@string/app_name"-->
+<!--        tools:layout="@layout/fragment_single" />-->
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="team.tsinghua.ipsc.bipolar_disorder_detector.ui.statistics.StatisticsFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_statistics" />
 </navigation>

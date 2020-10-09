@@ -1,6 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.chaquo.python'
 
 android {
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
@@ -12,6 +18,18 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+        python {
+            buildPython "/Users/yixun/newv/bin/python"
+            pip {
+                install "scipy"
+                install "numpy"
+                install "joblib"
+                install "h5py"
+            }
+        }
     }
 
     buildTypes {
@@ -25,15 +43,22 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
+//    implementation 'com.android.support:support-v4:26.0.0'
     implementation 'com.google.android.material:material:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.squareup.okhttp:okhttp:2.7.5'
-    implementation 'com.empatica.empalink:E4link:1.0.0@aar'
+//    implementation 'com.empatica.empalink:E4link:1.0.0@aar'
+    implementation 'com.amap.api:search:latest.integration'
+    implementation 'com.amap.api:navi-3dmap:latest.integration'
+//    implementation 'com.amap.api:map2d:latest.integration'
+//    implementation 'com.amap.api:3dmap:latest.integration'
+    implementation 'com.amap.api:location:latest.integration'
 
 }
